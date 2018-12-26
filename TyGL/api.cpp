@@ -77,11 +77,11 @@ void glVertex4f(float x,float y,float z,float w)
 	    n = 0;
 	}
 	break;
-    case GL_TRIANGLE_STRIP:
+    /*case GL_TRIANGLE_STRIP:
 	if (cnt >= 3) {
 	    if (n == 3)
 		n = 0;
-            /* needed to respect triangle orientation */
+            // needed to respect triangle orientation 
             switch(cnt & 1) {
             case 0:
       		gl_draw_triangle(c,&c->vertex[2],&c->vertex[1],&c->vertex[0]);
@@ -100,7 +100,7 @@ void glVertex4f(float x,float y,float z,float w)
 	    n = 2;
 	}
 	break;
-
+    */
     case GL_QUADS:
 	if (n == 4) {
 	    c->vertex[2].edge_flag = 0;
@@ -112,7 +112,7 @@ void glVertex4f(float x,float y,float z,float w)
 	}
 	break;
 
-    case GL_QUAD_STRIP:
+    /*case GL_QUAD_STRIP:
 	if (n == 4) {
 	    gl_draw_triangle(c, &c->vertex[0], &c->vertex[1], &c->vertex[2]);
 	    gl_draw_triangle(c, &c->vertex[1], &c->vertex[3], &c->vertex[2]);
@@ -122,20 +122,16 @@ void glVertex4f(float x,float y,float z,float w)
 	}
 	break;
     case GL_POLYGON:
-	break;
-    default:
-	 exit(0);//gl_fatal_error("glBegin: type %x not handled\n", c->begin_type);
+	break;*/
+   // default:
+//	 exit(0);//gl_fatal_error("glBegin: type %x not handled\n", c->begin_type);
     }
 
     c->vertex_n = n;
  // glopVertex(GLContext * c, GLParam * p)
 }
 
-void glVertex2f(float x,float y) 
-{
-  glVertex4f(x,y,0,1);
-}
-
+ 
 void glVertex3f(float x,float y,float z) 
 {
   glVertex4f(x,y,z,1);
@@ -157,47 +153,34 @@ void glNormal3f(float x,float y,float z)
   c->current_normal.W = 0;
 }
 
-void glNormal3fv(float *v) 
-{
-  glNormal3f(v[0],v[1],v[2]);
-}
+ 
 
 /* glColor */
 
 void glColor4f(float r,float g,float b,float a)
 {
   GLContext *c=gl_get_context(); 
-  GLParam p[8];
-
-  //p[0].op=OP_Color;
-  p[1].f=r;
-  p[2].f=g;
-  p[3].f=b;
-  p[4].f=a;
-  /* direct convertion to integer to go faster if no shading */
-  p[5].ui = (unsigned int) (r * (ZB_POINT_RED_MAX - ZB_POINT_RED_MIN) + 
+  
+    c->current_color.X = r;
+    c->current_color.Y = g;
+    c->current_color.Z = b;
+    c->current_color.W = a;
+    c->longcurrent_color[0] = (unsigned int) (r * (ZB_POINT_RED_MAX - ZB_POINT_RED_MIN) + 
                             ZB_POINT_RED_MIN);
-  p[6].ui = (unsigned int) (g * (ZB_POINT_GREEN_MAX - ZB_POINT_GREEN_MIN) + 
+    c->longcurrent_color[1] = (unsigned int) (g * (ZB_POINT_GREEN_MAX - ZB_POINT_GREEN_MIN) + 
                             ZB_POINT_GREEN_MIN);
-  p[7].ui = (unsigned int) (b * (ZB_POINT_BLUE_MAX - ZB_POINT_BLUE_MIN) + 
+    c->longcurrent_color[2] = (unsigned int) (b * (ZB_POINT_BLUE_MAX - ZB_POINT_BLUE_MIN) + 
                             ZB_POINT_BLUE_MIN);
-  c->current_color.X = p[1].f;
-    c->current_color.Y = p[2].f;
-    c->current_color.Z = p[3].f;
-    c->current_color.W = p[4].f;
-    c->longcurrent_color[0] = p[5].ui;
-    c->longcurrent_color[1] = p[6].ui;
-    c->longcurrent_color[2] = p[7].ui;
 
     if (c->color_material_enabled) {
 	GLParam q[7];
 	//q[0].op = OP_Material;
 	q[1].i = c->current_color_material_mode;
 	q[2].i = c->current_color_material_type;
-	q[3].f = p[1].f;
-	q[4].f = p[2].f;
-	q[5].f = p[3].f;
-	q[6].f = p[4].f;
+	q[3].f = r;
+	q[4].f = g;
+	q[5].f = b;
+	q[6].f = a;
 	glopMaterial(c, q);
     }
 }
@@ -227,11 +210,7 @@ void glTexCoord2f(float s,float t)
   glTexCoord4f(s,t,0,1);
 }
 
-void glTexCoord2fv(float *v)
-{
-  glTexCoord4f(v[0],v[1],0,1);
-}
-
+ 
  
 void GL_EnableDisable(GLContext *c,GLParam *p)
 {
@@ -257,26 +236,11 @@ void GL_EnableDisable(GLContext *c,GLParam *p)
   case GL_DEPTH_TEST:
     c->depth_test = v;
     break;
-  case GL_POLYGON_OFFSET_FILL:
-    if (v) c->offset_states |= TGL_OFFSET_FILL;
-    else c->offset_states &= ~TGL_OFFSET_FILL;
-    break; 
-  case GL_POLYGON_OFFSET_POINT:
-    if (v) c->offset_states |= TGL_OFFSET_POINT;
-    else c->offset_states &= ~TGL_OFFSET_POINT;
-    break; 
-  case GL_POLYGON_OFFSET_LINE:
-    if (v) c->offset_states |= TGL_OFFSET_LINE;
-    else c->offset_states &= ~TGL_OFFSET_LINE;
-    break; 
+ 
   default:
     if (code>=GL_LIGHT0 && code<GL_LIGHT0+MAX_LIGHTS) {
       gl_enable_disable_light(c,code - GL_LIGHT0, v);
-    } else {
-      /*
-      fprintf(stderr,"glEnableDisable: 0x%X not supported.\n",code);
-      */
-    }
+    } 
     break;
   }
 }
@@ -353,12 +317,8 @@ void glBegin(int mode)
 	gl_eval_viewport(c);
 	c->viewport.updated = 0;
     }
-    /* triangle drawing functions */
-    //if (c->render_mode == GL_SELECT) {
-	//c->draw_triangle_front = gl_draw_triangle_select;
-	//c->draw_triangle_back = gl_draw_triangle_select;
-    //} else 
-	{
+     
+	 
 	switch (c->polygon_mode_front) {
  
 	default:
@@ -372,18 +332,13 @@ void glBegin(int mode)
 	    c->draw_triangle_back = gl_draw_triangle_fill;
 	    break;
 	}
-    }
+     
 }
 
 void glEnd(void)
 {
   GLContext *c=gl_get_context();
-  GLParam p[1];
-
-  //p[0].op=OP_End;
-
-  //glRunFunc(p);
-  // assert(c->in_begin == 1);
+   
 
     if (c->begin_type == GL_LINE_LOOP) {
 	 
@@ -403,12 +358,6 @@ void gl_matrix_update(GLContext *c);
 void glMatrixMode(int mode)
 {
   GLContext *c=gl_get_context(); 
-  GLParam p[2];
-
-  //p[0].op=OP_MatrixMode;
-  p[1].i=mode;
-
-//  glRunFunc(p);
   //==================================
    //int mode=p[1].i;
   switch(mode) {
@@ -426,43 +375,13 @@ void glMatrixMode(int mode)
   }
 }
 
-void glLoadMatrixf(const float *mm)
-{
-   GLContext *c=gl_get_context(); 
-  GLParam p[17];
-  int i;
-
-  //p[0].op=OP_LoadMatrix;
-  for(i=0;i<16;i++) p[i+1].f=mm[i];
-
- // glRunFunc(p);
-   M4 *m;
  
-  
-  GLParam *q;
-
-  m=c->matrix_buffer_ptr[c->matrix_mode];
-  q=p+1;
-
-  for(i=0;i<4;i++) {
-    m->m[0][i]=q[0].f;
-    m->m[1][i]=q[1].f;
-    m->m[2][i]=q[2].f;
-    m->m[3][i]=q[3].f;
-    q+=4;
-  }
-
-  gl_matrix_update(c);
-}
 
 void glLoadIdentity(void)
 {
   GLContext *c=gl_get_context(); 
-  GLParam p[1];
-
-  //p[0].op=OP_LoadIdentity;
-
-  //glRunFunc(p);
+   
+ 
   M4::gl_M4_Id(c->matrix_buffer_ptr[c->matrix_mode]);
 
   gl_matrix_update(c);
@@ -474,7 +393,7 @@ void glMultMatrixf(const float *mm)
   GLParam p[17];
   int i;
 
-  //p[0].op=OP_MultMatrix;
+   
   for(i=0;i<16;i++) p[i+1].f=mm[i];
 
   //glRunFunc(p);
@@ -501,15 +420,10 @@ void glPushMatrix(void)
 {
   GLContext *c=gl_get_context(); 
   GLParam p[1];
-
-  //p[0].op=OP_PushMatrix;
-
-  //glRunFunc(p);
+ 
   int n=c->matrix_mode;
   M4 *m;
-
-//  assert( (c->matrix_buffer_ptr[n] - c->matrix_stack[n] + 1 )
-//	   < c->matrix_stack_depth_max[n] );
+ 
 
   m=++c->matrix_buffer_ptr[n];
   
@@ -521,11 +435,7 @@ void glPushMatrix(void)
 void glPopMatrix(void)
 {
    GLContext *c=gl_get_context(); 
-   GLParam p[1];
-
-  //p[0].op=OP_PopMatrix;
-
- // glRunFunc(p);
+   
   int n=c->matrix_mode;
 
 //  assert( c->matrix_buffer_ptr[n] > c->matrix_stack[n] );
@@ -536,25 +446,16 @@ void glPopMatrix(void)
 void glRotatef(float angle,float x,float y,float z)
 {
   GLContext *c=gl_get_context(); 
-  GLParam p[5];
-
-  //p[0].op=OP_Rotate;
-  p[1].f=angle;
-  p[2].f=x;
-  p[3].f=y;
-  p[4].f=z;
-
- // glRunFunc(p);
-
+  
    M4 m;
   float u[3];
 //  float angle;
   int dir_code;
 
-  angle = p[1].f * M_PI / 180.0;
-  u[0]=p[2].f;
-  u[1]=p[3].f;
-  u[2]=p[4].f;
+  angle = angle * M_PI / 180.0;
+  u[0]=x;
+  u[1]=y;
+  u[2]=z;
 
   /* simple case detection */
   dir_code = ((u[0] != 0)<<2) | ((u[1] != 0)<<1) | (u[2] != 0);
@@ -617,12 +518,7 @@ void glRotatef(float angle,float x,float y,float z)
 void glTranslatef(float x,float y,float z)
 {
   GLContext *c=gl_get_context(); 
-  GLParam p[4];
-
-  //p[0].op=OP_Translate;
-  p[1].f=x;
-  p[2].f=y;
-  p[3].f=z;
+ 
 
  // glRunFunc(p);
    float *m;
@@ -641,13 +537,7 @@ void glTranslatef(float x,float y,float z)
 void glScalef(float x,float y,float z)
 {
   GLContext *c=gl_get_context(); 
-  GLParam p[4];
-
-  //p[0].op=OP_Scale;
-  p[1].f=x;
-  p[2].f=y;
-  p[3].f=z;
-
+  
   //glRunFunc(p);
   float *m;
 //  float x=p[1].f,y=p[2].f,z=p[3].f;
@@ -750,35 +640,20 @@ void gluPerspective( GLdouble fovy, GLdouble aspect,
 
 /* lightening */
 
-void glMaterialfv(int mode,int type,float *val)
+void glMaterialfv(int mode,int type,float *v)
 {
   GLContext *c=gl_get_context(); 
-  GLParam p[7];
   int i,n;
+  
+  GLParam p[7]; p[1].i=mode; p[2].i=type;
+  for(i=0;i<4;i++) p[3+i].f=v[i];
+  for(i=n;i<4;i++) p[3+i].f=0;
+  
 
   assert(mode == GL_FRONT  || mode == GL_BACK || mode==GL_FRONT_AND_BACK);
-
-  //p[0].op=OP_Material;
-  p[1].i=mode;
-  p[2].i=type;
   n=4;
   if (type == GL_SHININESS) n=1;
-  for(i=0;i<4;i++) p[3+i].f=val[i];
-  for(i=n;i<4;i++) p[3+i].f=0;
-
-  //glRunFunc(p);
-  //int mode=p[1].i;
-  //int type=p[2].i;
-  
-  float vv[4];
-
-  vv[0] = p[3].f;
-  vv[1] = p[4].f;
-  vv[2] = p[5].f;
-  vv[3] = p[6].f; /**/
-   float *v=vv;//&p[3].f;
- // float *v=&p[3].f;
-//  int i;
+   
   GLMaterial *m;
 
   if (mode == GL_FRONT_AND_BACK) {
