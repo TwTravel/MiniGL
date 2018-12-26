@@ -151,9 +151,7 @@ void RenderScene()
 		glEnd();								// 绘制结束
 	}
 
-	//SwapBuffers(g_hDC);									// 交换缓冲区
-	glFlush();
-    //glutSwapBuffers();
+ 
 }
 
 void gluPerspective( GLdouble fovy, GLdouble aspect,

@@ -661,35 +661,31 @@ void glMaterialfv(int mode,int type,float *v)
     glopMaterial(c,p);
     mode=GL_BACK;
   }
-  if (mode == GL_FRONT) m=&c->materials[0];
-  else m=&c->materials[1];
+  if (mode == GL_FRONT) 
+	  m=&c->materials[0];
+  else
+	  m=&c->materials[1];
 
   switch(type) {
   case GL_EMISSION:
-    for(i=0;i<4;i++)
-      m->emission.v[i]=v[i];
+    memcpy(m->emission.v, v, 4*sizeof(float));
     break;
   case GL_AMBIENT:
-    for(i=0;i<4;i++)
-      m->ambient.v[i]=v[i];
+    memcpy(m->ambient.v,  v, 4*sizeof(float));
     break;
   case GL_DIFFUSE:
-    for(i=0;i<4;i++)
-      m->diffuse.v[i]=v[i];
+    memcpy(m->diffuse.v,  v, 4*sizeof(float));
     break;
   case GL_SPECULAR:
-    for(i=0;i<4;i++)
-      m->specular.v[i]=v[i];
+    memcpy(m->specular.v, v, 4*sizeof(float));
     break;
   case GL_SHININESS:
     m->shininess=v[0];
     m->shininess_i = (v[0]/128.0f)*SPECULAR_BUFFER_RESOLUTION;
     break;
   case GL_AMBIENT_AND_DIFFUSE:
-    for(i=0;i<4;i++)
-      m->diffuse.v[i]=v[i];
-    for(i=0;i<4;i++)
-      m->ambient.v[i]=v[i];
+      memcpy(m->diffuse.v,  v, 4*sizeof(float));
+	  memcpy(m->ambient.v,  v, 4*sizeof(float));
     break;
   default:
     assert(0);
@@ -708,9 +704,6 @@ void glMaterialf(int mode,int type,float val)
   p[3].f=val;
   for(i=0;i<3;i++) p[4+i].f=0;
 
-  // glRunFunc(p);
-  //  int mode=p[1].i;
-  //  int type=p[2].i;
   
   float v[4];
   v[0] = p[3].f;
@@ -762,13 +755,13 @@ void glMaterialf(int mode,int type,float val)
   }
 }
 
+/*
 void glColorMaterial(int mode,int type)
 {
   GLContext *c=gl_get_context(); 
-  
   c->current_color_material_mode=mode;
   c->current_color_material_type=type;
-}
+}*/
 
 void glLightfv(int light,int type,float *val)
 { GLContext *c=gl_get_context(); 
@@ -781,10 +774,7 @@ void glLightfv(int light,int type,float *val)
   /* TODO: 3 composants ? */
   for(i=0;i<4;i++) p[3+i].f=val[i];
 
- // glRunFunc(p);
-
  
-//  GLContext *c=gl_get_context(); 
   V4 v;
   GLLight *l;
 //  int i;
@@ -854,111 +844,8 @@ void glLightfv(int light,int type,float *val)
 }
 
 
-void glLightf(int light,int type,float val)
-{ 
-  GLContext *c=gl_get_context(); 
-  V4 v;
-  GLLight *l;
-  int i;
-  
-  assert(light >= GL_LIGHT0 && light < GL_LIGHT0+MAX_LIGHTS );
-
-  l=&c->lights[light-GL_LIGHT0];
-
-  for(i=0;i<4;i++) v.v[i]= val;//p[3+i].f;
-
-  switch(type) {
-  case GL_AMBIENT:
-    l->ambient=v;
-    break;
-  case GL_DIFFUSE:
-    l->diffuse=v;
-    break;
-  case GL_SPECULAR:
-    l->specular=v;
-    break;
-  case GL_POSITION:
-    {
-      V4 pos;
-      M4::gl_M4_MulV4(&pos,c->matrix_buffer_ptr[0],&v);
-
-      l->position=pos;
-
-      if (l->position.v[3] == 0) {
-        l->norm_position.X=pos.X;
-        l->norm_position.Y=pos.Y;
-        l->norm_position.Z=pos.Z;
-        
-        gl_V3_Norm(&l->norm_position);
-      }
-    }
-    break;
-  case GL_SPOT_DIRECTION:
-    for(i=0;i<3;i++) {
-      l->spot_direction.v[i]=v.v[i];
-      l->norm_spot_direction.v[i]=v.v[i];
-    }
-    gl_V3_Norm(&l->norm_spot_direction);
-    break;
-  case GL_SPOT_EXPONENT:
-    l->spot_exponent=v.v[0];
-    break;
-  case GL_SPOT_CUTOFF:
-    {
-      float a=v.v[0];
-      assert(a == 180 || (a>=0 && a<=90));
-      l->spot_cutoff=a;
-      if (a != 180) l->cos_spot_cutoff=cos(a * M_PI / 180.0);
-    }
-    break;
-  case GL_CONSTANT_ATTENUATION:
-    l->attenuation[0]=v.v[0];
-    break;
-  case GL_LINEAR_ATTENUATION:
-    l->attenuation[1]=v.v[0];
-    break;
-  case GL_QUADRATIC_ATTENUATION:
-    l->attenuation[2]=v.v[0];
-    break;
-  default:
-    assert(0);
-  }
-}
-
-void glLightModelfv(int pname,float *param)
-{
- GLContext *c=gl_get_context(); 
-  
-
-  // int pname=p[1].i;
-  float *v=param;//&p[2].f;
-  int i;
-
-  switch(pname) {
-  case GL_LIGHT_MODEL_AMBIENT:
-    for(i=0;i<4;i++) 
-      c->ambient_light_model.v[i]=v[i];
-    break;
-  case GL_LIGHT_MODEL_LOCAL_VIEWER:
-    c->local_light_model=(int)v[0];
-    break;
-  case GL_LIGHT_MODEL_TWO_SIDE:
-    c->light_model_two_side = (int)v[0];
-    break;
-  default:
-    //tgl_warning("glopLightModel: illegal pname: 0x%x\n", pname);
-    //assert(0);
-    break;
-  }
-}
-
-/* clear */
-
- 
-
  
 /* textures */
-
 void glTexImage2D( int target, int level, int components,
                    int width, int height, int border,
                    int format, int type, void *pixels)
@@ -1046,22 +933,5 @@ void glBindTexture(int target,int texture)
     t=alloc_texture(c,texture);
   }
   c->current_texture=t;
-}
-
- 
-
-void glFlush(void)
-{
-  /* nothing to do */
-}
-
- 
-
-/* Non standard functions */
-
-void glDebug(int mode)
-{
-  GLContext *c=gl_get_context();
-  c->print_flag=mode;
 }
 
