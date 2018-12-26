@@ -10,11 +10,9 @@ SOURCES = \
     ./TyGL/api.cpp \
     ./3DS.cpp \
     ./TyGL/zbuffer.cpp \
-    ./TyGL/vertex.cpp \
     ./TyGL/ztriangle.cpp \
     ./TyGL/kh_project.cpp \
     ./TyGL/light.cpp \
-    ./TyGL/matrix.cpp \
     ./TyGL/clip.cpp \
     ./TyGL/specbuf.cpp \
     ./TyGL/image_util.cpp \
@@ -26,11 +24,9 @@ OBJ = \
     ./TyGL/api.o \
     ./3DS.o \
     ./TyGL/zbuffer.o \
-    ./TyGL/vertex.o \
     ./TyGL/ztriangle.o \
     ./TyGL/kh_project.o \
     ./TyGL/light.o \
-    ./TyGL/matrix.o \
     ./TyGL/clip.o \
     ./TyGL/specbuf.o \
     ./TyGL/image_util.o \

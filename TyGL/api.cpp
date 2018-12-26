@@ -4,6 +4,28 @@
 void gl_vertex_transform(GLContext * c, GLVertex * v);
 void glopMaterial(GLContext *c,GLParam *p);
 
+void gl_matrix_update(GLContext *c)
+{
+  c->matrix_model_projection_updated=(c->matrix_mode<=1);
+}
+
+void gl_eval_viewport(GLContext * c)
+{
+    GLViewport *v;
+    float zsize = (1 << (ZB_Z_BITS + ZB_POINT_Z_FRAC_BITS));
+	int dgbzsize = zsize;
+
+    v = &c->viewport;
+
+    v->trans.X = ((v->xsize - 0.5) / 2.0) + v->xmin;
+    v->trans.Y = ((v->ysize - 0.5) / 2.0) + v->ymin;
+    v->trans.Z = ((zsize - 0.5) / 2.0) + ((1 << ZB_POINT_Z_FRAC_BITS)) / 2;
+
+    v->scale.X = (v->xsize - 0.5) / 2.0;
+    v->scale.Y = -(v->ysize - 0.5) / 2.0;
+    v->scale.Z = -((zsize - 0.5) / 2.0);
+}
+
 void glVertex4f(float x,float y,float z,float w)
 {
   GLContext *c=gl_get_context(); 
