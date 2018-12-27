@@ -1,0 +1,7 @@
+<map id="gl_draw_triangle_fill" name="gl_draw_triangle_fill">
+<area shape="rect" id="node2" href="$zbuffer_8h.html#a188a8f02a369cd2f87f932c87f8196f2" title="ZB_setTexture" alt="" coords="244,5,351,32"/>
+<area shape="rect" id="node3" href="$ztriangle_8h.html#a3afbb38f4cfe6437d8b7bb8cbfc59bc0" title="ZB_fillTriangleMappingPerspective" alt="" coords="188,56,407,83"/>
+<area shape="rect" id="node5" href="$ztriangle_8h.html#a463642d781fe678f943b91384348f52b" title="ZB_fillTriangleSmooth" alt="" coords="224,107,371,133"/>
+<area shape="rect" id="node4" href="$ztriangle_8h.html#aa49bc4015406450bfdd048d0047ba6ef" title="PUT_PIXEL_TEX" alt="" coords="455,56,573,83"/>
+<area shape="rect" id="node6" href="$ztriangle_8h.html#ac0bf76d367b26b79663ace939b99a378" title="PUT_PIXELK" alt="" coords="465,107,563,133"/>
+</map>

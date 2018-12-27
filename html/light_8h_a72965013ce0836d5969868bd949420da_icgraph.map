@@ -1,0 +1,11 @@
+<map id="clampf" name="clampf">
+<area shape="rect" id="node2" href="$zgl_8h.html#a39b4d681ec2e1036066125ac38080ba2" title="gl_shade_vertex" alt="" coords="113,101,228,128"/>
+<area shape="rect" id="node3" href="$api_8cpp.html#a2c7d574ed7ab23b6231f3cee467e1bab" title="glVertex4f" alt="" coords="276,101,356,128"/>
+<area shape="rect" id="node4" href="$api_8cpp.html#a8dbf2ea854e1b61ae797aad37f1f3a59" title="glVertex3f" alt="" coords="407,69,487,96"/>
+<area shape="rect" id="node9" href="$api_8cpp.html#ad67dedf5f81b7f88610dffbd62474b46" title="glVertex3fv" alt="" coords="404,132,489,159"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a2fe48e89660e455d6353c1f28bc3d161" title="RenderScene" alt="" coords="551,5,651,32"/>
+<area shape="rect" id="node7" href="$main_8cpp.html#a3ab20c8d4e5c3a3786714f8def8d110d" title="StlShape_Render" alt="" coords="539,56,662,83"/>
+<area shape="rect" id="node8" href="$main_8cpp.html#ad72ab3589d44981c28476565df35edfa" title="Test_TRIANGLES" alt="" coords="537,107,664,133"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="712,81,763,108"/>
+<area shape="rect" id="node10" href="$main_8cpp.html#ace6bb1690f1764d1613d47f4bcdc357c" title="drawPolygon" alt="" coords="553,157,649,184"/>
+</map>

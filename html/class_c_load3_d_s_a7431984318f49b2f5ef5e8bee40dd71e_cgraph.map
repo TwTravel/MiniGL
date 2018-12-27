@@ -1,0 +1,9 @@
+<map id="CLoad3DS::ProcessNextObjectChunk" name="CLoad3DS::ProcessNextObjectChunk">
+<area shape="rect" id="node2" href="$3_d_s_8cpp.html#a5e933acfb97b26586252d559d26af25a" title="empty_chunk" alt="" coords="313,5,413,32"/>
+<area shape="rect" id="node3" href="$class_c_load3_d_s.html#afc2d69002657e64f2df59719b8068251" title="CLoad3DS::ReadChunk" alt="" coords="284,56,443,83"/>
+<area shape="rect" id="node4" href="$class_c_load3_d_s.html#a0ec5c61504ee7eb297ce9b5def91c29f" title="CLoad3DS::ReadVertices" alt="" coords="278,107,449,133"/>
+<area shape="rect" id="node5" href="$class_c_load3_d_s.html#a87bee6dd82af8fc4e1ba6287de060ce4" title="CLoad3DS::ReadVertexIndices" alt="" coords="263,157,464,184"/>
+<area shape="rect" id="node6" href="$class_c_load3_d_s.html#a7f2c065ca341baa92acdd14d2f7a2742" title="CLoad3DS::ReadObjectMaterial" alt="" coords="260,208,467,235"/>
+<area shape="rect" id="node8" href="$class_c_load3_d_s.html#a67ca6ed7acd0d642056caffab6bf79c8" title="CLoad3DS::ReadUVCoordinates" alt="" coords="259,259,468,285"/>
+<area shape="rect" id="node7" href="$class_c_load3_d_s.html#ac4396c62cd284aff146c6c58f70b57f8" title="CLoad3DS::GetString" alt="" coords="516,208,663,235"/>
+</map>

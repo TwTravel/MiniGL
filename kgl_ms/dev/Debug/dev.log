@@ -1,0 +1,235 @@
+﻿Build started 2018/12/27 星期四 10:12:41.
+Project "F:\tzwang\graphics\MiniGL\kgl_ms\dev\dev.vcxproj" on node 2 (rebuild target(s)).
+_PrepareForClean:
+  Deleting file "Debug\dev.lastbuildstate".
+InitializeBuildStatus:
+  Creating "Debug\dev.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt 3DS.cpp api.cpp clip.cpp glx.cpp image_util.cpp init.cpp kh_project.cpp main.cpp
+  main.cpp
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(207): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(207): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(207): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(207): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(208): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(208): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(208): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(208): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(209): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(209): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(209): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(209): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(210): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(210): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(210): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(210): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(402): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(403): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(406): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(406): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(413): warning C4244: '=' : conversion from 'double' to 'BYTE', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(414): warning C4244: '=' : conversion from 'double' to 'BYTE', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(415): warning C4244: '=' : conversion from 'double' to 'BYTE', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(423): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(424): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(427): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(427): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(506): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(518): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
+f:\tzwang\graphics\minigl\kgl_ms\dev\x11imp.h(150): warning C4101: 'buf' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\x11imp.h(149): warning C4101: 'k' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\readstl.h(282): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(144): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(144): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(144): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(147): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(209): warning C4305: 'initializing' : truncation from 'double' to 'float'
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(209): warning C4305: 'initializing' : truncation from 'double' to 'float'
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(210): warning C4305: 'initializing' : truncation from 'double' to 'float'
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(210): warning C4305: 'initializing' : truncation from 'double' to 'float'
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(212): warning C4305: 'initializing' : truncation from 'double' to 'float'
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(212): warning C4305: 'initializing' : truncation from 'double' to 'float'
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(213): warning C4305: 'initializing' : truncation from 'double' to 'float'
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(213): warning C4305: 'initializing' : truncation from 'double' to 'float'
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(215): warning C4305: 'initializing' : truncation from 'double' to 'float'
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(215): warning C4305: 'initializing' : truncation from 'double' to 'float'
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(216): warning C4305: 'initializing' : truncation from 'double' to 'float'
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(216): warning C4305: 'initializing' : truncation from 'double' to 'float'
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(242): warning C4101: 'Emission' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(263): warning C4018: '<' : signed/unsigned mismatch
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(269): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(269): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(269): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(273): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(273): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(273): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(257): warning C4101: 'i' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(307): warning C4305: 'argument' : truncation from 'double' to 'float'
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(289): warning C4101: 'i' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(422): warning C4305: '+=' : truncation from 'double' to 'float'
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(432): warning C4305: '+=' : truncation from 'double' to 'float'
+f:\tzwang\graphics\minigl\kgl_ms\dev\main.cpp(443): warning C4305: '+=' : truncation from 'double' to 'float'
+  kh_project.cpp
+f:\tzwang\graphics\minigl\kgl_ms\dev\kh_project.cpp(63): warning C4244: '=' : conversion from 'GLdouble' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\kh_project.cpp(64): warning C4244: '=' : conversion from 'GLdouble' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\kh_project.cpp(65): warning C4244: '=' : conversion from 'GLdouble' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\kh_project.cpp(67): warning C4244: '=' : conversion from 'GLdouble' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\kh_project.cpp(68): warning C4244: '=' : conversion from 'GLdouble' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\kh_project.cpp(69): warning C4244: '=' : conversion from 'GLdouble' to 'float', possible loss of data
+  init.cpp
+f:\tzwang\graphics\minigl\kgl_ms\dev\init.cpp(84): warning C4305: 'argument' : truncation from 'double' to 'float'
+f:\tzwang\graphics\minigl\kgl_ms\dev\init.cpp(84): warning C4305: 'argument' : truncation from 'double' to 'float'
+f:\tzwang\graphics\minigl\kgl_ms\dev\init.cpp(84): warning C4305: 'argument' : truncation from 'double' to 'float'
+f:\tzwang\graphics\minigl\kgl_ms\dev\init.cpp(93): warning C4305: 'argument' : truncation from 'double' to 'float'
+f:\tzwang\graphics\minigl\kgl_ms\dev\init.cpp(93): warning C4305: 'argument' : truncation from 'double' to 'float'
+f:\tzwang\graphics\minigl\kgl_ms\dev\init.cpp(93): warning C4305: 'argument' : truncation from 'double' to 'float'
+f:\tzwang\graphics\minigl\kgl_ms\dev\init.cpp(94): warning C4305: 'argument' : truncation from 'double' to 'float'
+f:\tzwang\graphics\minigl\kgl_ms\dev\init.cpp(94): warning C4305: 'argument' : truncation from 'double' to 'float'
+f:\tzwang\graphics\minigl\kgl_ms\dev\init.cpp(94): warning C4305: 'argument' : truncation from 'double' to 'float'
+  image_util.cpp
+  glx.cpp
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(207): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(207): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(207): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(207): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(208): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(208): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(208): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(208): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(209): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(209): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(209): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(209): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(210): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(210): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(210): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(210): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(402): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(403): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(406): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(406): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(413): warning C4244: '=' : conversion from 'double' to 'BYTE', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(414): warning C4244: '=' : conversion from 'double' to 'BYTE', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(415): warning C4244: '=' : conversion from 'double' to 'BYTE', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(423): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(424): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(427): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(427): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(506): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
+f:\tzwang\graphics\minigl\kgl_ms\dev\c24bitmap.h(518): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
+f:\tzwang\graphics\minigl\kgl_ms\dev\c256bitmap.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+f:\tzwang\graphics\minigl\kgl_ms\dev\c256bitmap.h(96): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
+f:\tzwang\graphics\minigl\kgl_ms\dev\c256bitmap.h(107): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
+  clip.cpp
+f:\tzwang\graphics\minigl\kgl_ms\dev\clip.cpp(22): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\clip.cpp(36): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+  api.cpp
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(78): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(79): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(81): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(82): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(87): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(95): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(96): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(100): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(101): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(105): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(106): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(110): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(111): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(367): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(368): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(370): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(371): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(376): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(384): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(385): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(525): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(541): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(335): warning C4101: 'drdy' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(341): warning C4101: 'dtdl_min' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(340): warning C4101: 'dsdy' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(336): warning C4101: 'dgdx' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(341): warning C4101: 'dtdy' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(335): warning C4101: 'r1' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(336): warning C4101: 'dgdy' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(340): warning C4101: 'dsdl_max' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(335): warning C4101: 'drdl_min' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(336): warning C4101: 'dgdl_min' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(340): warning C4101: 'dsdl_min' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(337): warning C4101: 'dbdl_min' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(337): warning C4101: 'dbdx' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(336): warning C4101: 'dgdl_max' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(341): warning C4101: 'dtdl_max' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(340): warning C4101: 's1' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(337): warning C4101: 'dbdl_max' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(336): warning C4101: 'g1' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(341): warning C4101: 't1' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(335): warning C4101: 'drdx' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(340): warning C4101: 'dsdx' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(337): warning C4101: 'dbdy' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(341): warning C4101: 'dtdx' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(335): warning C4101: 'drdl_max' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\ztriangle.h(337): warning C4101: 'b1' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\light.h(47): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\light.h(175): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\api.cpp(21): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\api.cpp(25): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\api.cpp(26): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\api.cpp(27): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\api.cpp(29): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\api.cpp(30): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\api.cpp(31): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\api.cpp(39): warning C4101: 'i' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\api.cpp(341): warning C4065: switch statement contains 'default' but no 'case' labels
+f:\tzwang\graphics\minigl\kgl_ms\dev\api.cpp(348): warning C4065: switch statement contains 'default' but no 'case' labels
+f:\tzwang\graphics\minigl\kgl_ms\dev\api.cpp(436): warning C4101: 'p' : unreferenced local variable
+f:\tzwang\graphics\minigl\kgl_ms\dev\api.cpp(469): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\api.cpp(623): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\api.cpp(624): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\api.cpp(625): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\api.cpp(626): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\api.cpp(627): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\api.cpp(628): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\api.cpp(698): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\api.cpp(759): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\api.cpp(843): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+f:\tzwang\graphics\minigl\kgl_ms\dev\api.cpp(938): warning C4101: 'p' : unreferenced local variable
+  3DS.cpp
+f:\tzwang\graphics\minigl\kgl_ms\dev\3ds.cpp(24): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
+f:\tzwang\graphics\minigl\kgl_ms\dev\3ds.cpp(29): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\tzwang\graphics\minigl\kgl_ms\dev\3ds.cpp(43): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : see declaration of 'sprintf'
+  Generating Code...
+Link:
+  c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\tzwang\graphics\MiniGL\kgl_ms\dev\Debug\dev.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\dev.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\tzwang\graphics\MiniGL\kgl_ms\dev\Debug\dev.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\tzwang\graphics\MiniGL\kgl_ms\dev\Debug\dev.lib" /MACHINE:X86 Debug\3DS.obj
+  Debug\api.obj
+  Debug\clip.obj
+  Debug\glx.obj
+  Debug\image_util.obj
+  Debug\init.obj
+  Debug\kh_project.obj
+  Debug\main.obj
+  dev.vcxproj -> F:\tzwang\graphics\MiniGL\kgl_ms\dev\Debug\dev.exe
+Manifest:
+  c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"F:\tzwang\graphics\MiniGL\kgl_ms\dev\Debug\dev.exe;#1" /manifest Debug\dev.exe.intermediate.manifest
+FinalizeBuildStatus:
+  Deleting file "Debug\dev.unsuccessfulbuild".
+  Touching "Debug\dev.lastbuildstate".
+Done Building Project "F:\tzwang\graphics\MiniGL\kgl_ms\dev\dev.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.41

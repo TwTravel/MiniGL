@@ -1,0 +1,10 @@
+<map id="CLoad3DS::ReadChunk" name="CLoad3DS::ReadChunk">
+<area shape="rect" id="node2" href="$class_c_load3_d_s.html#a31e0d97d439c3d24753f688702d80389" title="CLoad3DS::Import3DS" alt="" coords="963,5,1116,32"/>
+<area shape="rect" id="node6" href="$class_c_load3_d_s.html#a2ab2d3a9b8c8d36c734b6cc97874f048" title="CLoad3DS::ProcessNextChunk" alt="" coords="711,60,915,87"/>
+<area shape="rect" id="node7" href="$class_c_load3_d_s.html#a7431984318f49b2f5ef5e8bee40dd71e" title="CLoad3DS::ProcessNextObject\lChunk" alt="" coords="453,79,659,121"/>
+<area shape="rect" id="node8" href="$class_c_load3_d_s.html#adceb25db6261fadac9303eb3e3a01fd4" title="CLoad3DS::ProcessNextMaterial\lChunk" alt="" coords="449,145,663,186"/>
+<area shape="rect" id="node9" href="$class_c_load3_d_s.html#a7d4564f2e782b8ec348faed08e07577f" title="CLoad3DS::ReadColorChunk" alt="" coords="212,180,401,207"/>
+<area shape="rect" id="node3" href="$ui_8h.html#a2858154e2009b0e6e616f313177762bc" title="init" alt="" coords="1164,5,1203,32"/>
+<area shape="rect" id="node4" href="$x11imp_8h.html#a842e6c887d4e9e803ac2d1df88f58ebe" title="ui_loop" alt="" coords="1251,5,1313,32"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="1361,5,1412,32"/>
+</map>

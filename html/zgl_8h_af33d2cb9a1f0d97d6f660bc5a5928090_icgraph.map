@@ -1,0 +1,7 @@
+<map id="gl_resizeImageNoInterpolate" name="gl_resizeImageNoInterpolate">
+<area shape="rect" id="node2" href="$gl_8h.html#a289e3d5970c18a063145f7de6dfdcf2d" title="glTexImage2D" alt="" coords="239,5,343,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a82fcbb58cdb4bd104d93783d200e1255" title="CreateTexture" alt="" coords="391,5,493,32"/>
+<area shape="rect" id="node4" href="$ui_8h.html#a2858154e2009b0e6e616f313177762bc" title="init" alt="" coords="541,5,580,32"/>
+<area shape="rect" id="node5" href="$x11imp_8h.html#a842e6c887d4e9e803ac2d1df88f58ebe" title="ui_loop" alt="" coords="628,5,691,32"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="739,5,789,32"/>
+</map>

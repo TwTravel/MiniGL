@@ -1,0 +1,7 @@
+<map id="GLSharedState" name="GLSharedState">
+<area shape="rect" id="node2" href="$struct_g_l_list.html" title="GLList" alt="" coords="77,185,137,212"/>
+<area shape="rect" id="node3" href="$struct_g_l_param_buffer.html" title="GLParamBuffer" alt="" coords="5,95,116,121"/>
+<area shape="rect" id="node4" href="$union_g_l_param.html" title="GLParam" alt="" coords="22,5,99,32"/>
+<area shape="rect" id="node5" href="$struct_g_l_texture.html" title="GLTexture" alt="" coords="181,185,263,212"/>
+<area shape="rect" id="node6" href="$struct_g_l_image.html" title="GLImage" alt="" coords="194,95,269,121"/>
+</map>

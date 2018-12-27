@@ -1,0 +1,6 @@
+<map id="glTexImage2D" name="glTexImage2D">
+<area shape="rect" id="node2" href="$zgl_8h.html#a346f233283cd5a0ea2cd95d2f65c0fab" title="gl_get_context" alt="" coords="197,5,303,32"/>
+<area shape="rect" id="node3" href="$zbuffer_8h.html#a6408eb60745a8362ddf6ca9a9dc97e31" title="gl_malloc" alt="" coords="211,56,289,83"/>
+<area shape="rect" id="node4" href="$image__util_8cpp.html#af33d2cb9a1f0d97d6f660bc5a5928090" title="gl_resizeImageNoInterpolate" alt="" coords="157,107,343,133"/>
+<area shape="rect" id="node5" href="$zbuffer_8h.html#a68523f6e9a05d699cc292458a3f7bf12" title="gl_free" alt="" coords="220,157,280,184"/>
+</map>

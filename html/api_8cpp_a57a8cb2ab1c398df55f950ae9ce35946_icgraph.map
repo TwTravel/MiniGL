@@ -1,0 +1,9 @@
+<map id="glopMaterial" name="glopMaterial">
+<area shape="rect" id="node2" href="$api_8cpp.html#a65ef877e62fe11b874fd8e31d28dfc40" title="glColor4f" alt="" coords="153,5,225,32"/>
+<area shape="rect" id="node6" href="$gl_8h.html#a95d0cf7853b0c9a01db6310571ca3201" title="glMaterialfv" alt="" coords="145,56,232,83"/>
+<area shape="rect" id="node8" href="$gl_8h.html#a98fe1bfac2425a0dbcb9282f420b3e72" title="glMaterialf" alt="" coords="148,107,229,133"/>
+<area shape="rect" id="node3" href="$api_8cpp.html#a35ce73116967ee8c191ad089b266ac3c" title="glColor3f" alt="" coords="291,5,363,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a2fe48e89660e455d6353c1f28bc3d161" title="RenderScene" alt="" coords="423,5,523,32"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="571,31,621,57"/>
+<area shape="rect" id="node7" href="$main_8cpp.html#a40bef297d10af7b414fbad05a996bec0" title="SurfSetColor" alt="" coords="280,56,375,83"/>
+</map>

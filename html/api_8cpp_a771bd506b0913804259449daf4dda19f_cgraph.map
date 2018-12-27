@@ -1,0 +1,15 @@
+<map id="glBegin" name="glBegin">
+<area shape="rect" id="node2" href="$zgl_8h.html#a346f233283cd5a0ea2cd95d2f65c0fab" title="gl_get_context" alt="" coords="141,5,247,32"/>
+<area shape="rect" id="node3" href="$class_m4.html#aab947bd41df3f197faa8951dd6113dc8" title="M4::gl_M4_Inv" alt="" coords="141,56,247,83"/>
+<area shape="rect" id="node5" href="$class_m4.html#aa83cb7f8464ff3505c0d1384fc054492" title="M4::gl_M4_Transpose" alt="" coords="119,107,269,133"/>
+<area shape="rect" id="node6" href="$class_m4.html#a605fb41c5b8b5b2bd462cb10276d3370" title="M4::gl_M4_Mul" alt="" coords="139,157,249,184"/>
+<area shape="rect" id="node7" href="$class_m4.html#a1b09fff1ecd1d038b62d523fac155f42" title="M4::gl_M4_IsId" alt="" coords="139,208,249,235"/>
+<area shape="rect" id="node8" href="$api_8cpp.html#a0b2110f0beb6462381bcaf0216207d56" title="gl_eval_viewport" alt="" coords="137,259,251,285"/>
+<area shape="rect" id="node9" href="$zgl_8h.html#a7ee00c8e510d4652c0fec3e5b620ea88" title="gl_draw_triangle_fill" alt="" coords="127,309,261,336"/>
+<area shape="rect" id="node4" href="$zmath_8h.html#a9a136fb1e0d2b0be8f02deb79bbe1cdd" title="Matrix_Inv" alt="" coords="387,56,467,83"/>
+<area shape="rect" id="node10" href="$zbuffer_8h.html#a188a8f02a369cd2f87f932c87f8196f2" title="ZB_setTexture" alt="" coords="373,259,480,285"/>
+<area shape="rect" id="node11" href="$ztriangle_8h.html#a3afbb38f4cfe6437d8b7bb8cbfc59bc0" title="ZB_fillTriangleMappingPerspective" alt="" coords="317,309,536,336"/>
+<area shape="rect" id="node13" href="$ztriangle_8h.html#a463642d781fe678f943b91384348f52b" title="ZB_fillTriangleSmooth" alt="" coords="353,360,500,387"/>
+<area shape="rect" id="node12" href="$ztriangle_8h.html#aa49bc4015406450bfdd048d0047ba6ef" title="PUT_PIXEL_TEX" alt="" coords="584,309,703,336"/>
+<area shape="rect" id="node14" href="$ztriangle_8h.html#ac0bf76d367b26b79663ace939b99a378" title="PUT_PIXELK" alt="" coords="594,360,693,387"/>
+</map>

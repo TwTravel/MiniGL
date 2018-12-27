@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['s',['s',['../struct_z_buffer_point.html#a9ec7a3557097bd28253247d654b3b167',1,'ZBufferPoint']]],
+  ['scale',['scale',['../struct_g_l_viewport.html#a6456f6423aefa4bc512e24cdebee77f7',1,'GLViewport']]],
+  ['select_5fbuffer',['select_buffer',['../struct_g_l_context.html#a50768aed1d051631518edbbe8c7f1202',1,'GLContext']]],
+  ['select_5fhit',['select_hit',['../struct_g_l_context.html#a2a3eea0b025372759d5747b865f93004',1,'GLContext']]],
+  ['select_5fhits',['select_hits',['../struct_g_l_context.html#ae33f54d285e9397ee46dafdb260438e2',1,'GLContext']]],
+  ['select_5foverflow',['select_overflow',['../struct_g_l_context.html#afca09ab8edc212e120fdb207724d3503',1,'GLContext']]],
+  ['select_5fptr',['select_ptr',['../struct_g_l_context.html#a239fb73db6381b865b7e5820e0639a20',1,'GLContext']]],
+  ['select_5fsize',['select_size',['../struct_g_l_context.html#aa95d8b35401afc02387e54711ae04028',1,'GLContext']]],
+  ['shared_5fstate',['shared_state',['../struct_g_l_context.html#a610146b8450147a629210b252936ae75',1,'GLContext']]],
+  ['shininess',['shininess',['../struct_g_l_material.html#ad565a6c69d1cc228d8dfdf240b4225e3',1,'GLMaterial']]],
+  ['shininess_5fi',['shininess_i',['../struct_g_l_spec_buf.html#ac60fbb372588f4af2a5e7bcdefc0c670',1,'GLSpecBuf::shininess_i()'],['../struct_g_l_material.html#ae29a7688dc547462c93dd6121ad66501',1,'GLMaterial::shininess_i()']]],
+  ['specbuf_5ffirst',['specbuf_first',['../struct_g_l_context.html#ac926b7540b1aa29b9f3504cc662f238c',1,'GLContext']]],
+  ['specbuf_5fnum_5fbuffers',['specbuf_num_buffers',['../struct_g_l_context.html#adbead5167827b54e24e158f1ee8619cb',1,'GLContext']]],
+  ['specbuf_5fused_5fcounter',['specbuf_used_counter',['../struct_g_l_context.html#adb983d6c9c7ef794047a9d3705d6aad2',1,'GLContext']]],
+  ['specular',['specular',['../struct_g_l_light.html#a6916b6666ab9aed55f09dba4ecd3c02b',1,'GLLight::specular()'],['../struct_g_l_material.html#a2f725afc88c7b1ad52a5051980f90c0a',1,'GLMaterial::specular()']]],
+  ['spot_5fcutoff',['spot_cutoff',['../struct_g_l_light.html#aa8340d3293918948f257d75bb98ba92d',1,'GLLight']]],
+  ['spot_5fdirection',['spot_direction',['../struct_g_l_light.html#ac53694d9392fd6fc38a70b1875b6152c',1,'GLLight']]],
+  ['spot_5fexponent',['spot_exponent',['../struct_g_l_light.html#a4a8d7e37dec93a50738045983889b59b',1,'GLLight']]],
+  ['strfile',['strFile',['../structt_material_info.html#a8f08d7596564722ce0cd364063653820',1,'tMaterialInfo']]],
+  ['strname',['strName',['../structt_material_info.html#acb84d881b567ff01b91469e8ba057d52',1,'tMaterialInfo::strName()'],['../structt3_d_object.html#a2c50a72d214d9bd232c1d80d48c82944',1,'t3DObject::strName()']]],
+  ['sz',['sz',['../struct_z_buffer_point.html#a60d1e022242a613e94259762cb3404b8',1,'ZBufferPoint']]]
+];

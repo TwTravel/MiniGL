@@ -1,0 +1,10 @@
+<map id="glDeleteTextures" name="glDeleteTextures">
+<area shape="rect" id="node2" href="$zgl_8h.html#a346f233283cd5a0ea2cd95d2f65c0fab" title="gl_get_context" alt="" coords="321,5,428,32"/>
+<area shape="rect" id="node3" href="$texture_8h.html#a7da30a821bd52e74601248e9f1a6b393" title="find_texture" alt="" coords="330,157,419,184"/>
+<area shape="rect" id="node4" href="$api_8cpp.html#a9f7394ec92b287ce8e47c0ba999e67c9" title="glBindTexture" alt="" coords="172,56,273,83"/>
+<area shape="rect" id="node8" href="$texture_8h.html#a234660610630f60f438bc980f362bc7d" title="free_texture" alt="" coords="177,157,268,184"/>
+<area shape="rect" id="node5" href="$api_8cpp.html#a7da30a821bd52e74601248e9f1a6b393" title="find_texture" alt="" coords="330,56,419,83"/>
+<area shape="rect" id="node6" href="$api_8cpp.html#a87397fa141120d429e8da0e6e563638f" title="alloc_texture" alt="" coords="327,107,423,133"/>
+<area shape="rect" id="node7" href="$zbuffer_8h.html#aaf262bfff7cbb62d532ab0c1172b12ca" title="gl_zalloc" alt="" coords="476,107,549,133"/>
+<area shape="rect" id="node9" href="$zbuffer_8h.html#a68523f6e9a05d699cc292458a3f7bf12" title="gl_free" alt="" coords="345,208,405,235"/>
+</map>

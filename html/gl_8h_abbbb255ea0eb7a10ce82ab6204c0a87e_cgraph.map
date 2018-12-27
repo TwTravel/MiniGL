@@ -1,0 +1,16 @@
+<map id="glInit" name="glInit">
+<area shape="rect" id="node2" href="$zbuffer_8h.html#aaf262bfff7cbb62d532ab0c1172b12ca" title="gl_zalloc" alt="" coords="431,96,504,123"/>
+<area shape="rect" id="node3" href="$init_8cpp.html#a9c62c6a77f6d8c9907c8982ea0692fbf" title="gl_ctx" alt="" coords="129,45,187,72"/>
+<area shape="rect" id="node4" href="$zbuffer_8h.html#a6408eb60745a8362ddf6ca9a9dc97e31" title="gl_malloc" alt="" coords="119,96,197,123"/>
+<area shape="rect" id="node5" href="$init_8cpp.html#aeecef6b6a0090cb89db6506dac4b8a40" title="initSharedState" alt="" coords="103,147,213,173"/>
+<area shape="rect" id="node7" href="$zmath_8h.html#af20c7a5da600f0f0da9c7e2a6dde5e15" title="gl_V4_New" alt="" coords="115,197,201,224"/>
+<area shape="rect" id="node8" href="$zmath_8h.html#a61eea8bdaba09b14e74eb6ab6e47843a" title="gl_V3_New" alt="" coords="115,248,201,275"/>
+<area shape="rect" id="node9" href="$texture_8h.html#a40ebbbf631a732687b344c526113b2f2" title="glInitTextures" alt="" coords="109,299,207,325"/>
+<area shape="rect" id="node11" href="$api_8cpp.html#a716219c039b4ec370e6e6928cf168af6" title="glMatrixMode" alt="" coords="108,349,208,376"/>
+<area shape="rect" id="node13" href="$api_8cpp.html#ad2f4e5d63593ca7af2a64041a6a52749" title="glLoadIdentity" alt="" coords="107,400,209,427"/>
+<area shape="rect" id="node6" href="$api_8cpp.html#a87397fa141120d429e8da0e6e563638f" title="alloc_texture" alt="" coords="274,147,370,173"/>
+<area shape="rect" id="node10" href="$texture_8h.html#a7da30a821bd52e74601248e9f1a6b393" title="find_texture" alt="" coords="277,299,367,325"/>
+<area shape="rect" id="node12" href="$zgl_8h.html#a346f233283cd5a0ea2cd95d2f65c0fab" title="gl_get_context" alt="" coords="269,349,375,376"/>
+<area shape="rect" id="node14" href="$class_m4.html#a96425fa56de97de53bd137f6686a74c3" title="M4::gl_M4_Id" alt="" coords="272,400,372,427"/>
+<area shape="rect" id="node15" href="$api_8cpp.html#ad0fb8fbd40dcdabe308f8da80d42127f" title="gl_matrix_update" alt="" coords="261,451,383,477"/>
+</map>

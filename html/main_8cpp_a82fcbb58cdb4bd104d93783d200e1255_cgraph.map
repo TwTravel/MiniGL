@@ -1,0 +1,13 @@
+<map id="CreateTexture" name="CreateTexture">
+<area shape="rect" id="node2" href="$class_c24_bit_map.html#a1f4c4a4d77e01097253eec5a41af2ef5" title="C24BitMap::Load" alt="" coords="156,5,279,32"/>
+<area shape="rect" id="node3" href="$gl_8h.html#af5f2f55521ed0a98580bf7e12118681f" title="glGenTextures" alt="" coords="164,107,271,133"/>
+<area shape="rect" id="node5" href="$api_8cpp.html#a9f7394ec92b287ce8e47c0ba999e67c9" title="glBindTexture" alt="" coords="167,56,268,83"/>
+<area shape="rect" id="node9" href="$api_8cpp.html#a289e3d5970c18a063145f7de6dfdcf2d" title="glTexImage2D" alt="" coords="165,157,269,184"/>
+<area shape="rect" id="node4" href="$zgl_8h.html#a346f233283cd5a0ea2cd95d2f65c0fab" title="gl_get_context" alt="" coords="366,107,473,133"/>
+<area shape="rect" id="node6" href="$api_8cpp.html#a7da30a821bd52e74601248e9f1a6b393" title="find_texture" alt="" coords="375,5,464,32"/>
+<area shape="rect" id="node7" href="$api_8cpp.html#a87397fa141120d429e8da0e6e563638f" title="alloc_texture" alt="" coords="371,56,467,83"/>
+<area shape="rect" id="node8" href="$zbuffer_8h.html#aaf262bfff7cbb62d532ab0c1172b12ca" title="gl_zalloc" alt="" coords="560,56,633,83"/>
+<area shape="rect" id="node10" href="$zbuffer_8h.html#a6408eb60745a8362ddf6ca9a9dc97e31" title="gl_malloc" alt="" coords="381,157,458,184"/>
+<area shape="rect" id="node11" href="$image__util_8cpp.html#af33d2cb9a1f0d97d6f660bc5a5928090" title="gl_resizeImageNoInterpolate" alt="" coords="327,208,512,235"/>
+<area shape="rect" id="node12" href="$zbuffer_8h.html#a68523f6e9a05d699cc292458a3f7bf12" title="gl_free" alt="" coords="389,259,449,285"/>
+</map>

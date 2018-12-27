@@ -1,0 +1,6 @@
+<map id="gl_draw_triangle" name="gl_draw_triangle">
+<area shape="rect" id="node2" href="$clip_8cpp.html#a7f4eaa3c74d12823096b40caf576a49c" title="gl_draw_triangle_clip" alt="" coords="168,31,311,57"/>
+<area shape="rect" id="node3" href="$clip_8cpp.html#abc11f175a1d30e53a7a2565c7d03683d" title="updateTmp" alt="" coords="359,31,445,57"/>
+<area shape="rect" id="node4" href="$clip_8cpp.html#a62f11a360a7c2d716313d8b919232b94" title="gl_clipcode" alt="" coords="532,5,619,32"/>
+<area shape="rect" id="node5" href="$clip_8cpp.html#a91d4d325b864f09588d637a0f03cb7f9" title="gl_transform_to_viewport" alt="" coords="493,56,657,83"/>
+</map>

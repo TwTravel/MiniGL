@@ -1,0 +1,7 @@
+<map id="gl_shade_vertex" name="gl_shade_vertex">
+<area shape="rect" id="node2" href="$light_8h.html#a72965013ce0836d5969868bd949420da" title="clampf" alt="" coords="203,5,263,32"/>
+<area shape="rect" id="node3" href="$zmath_8h.html#af5ae0d4837a3356873c9e8652bffdbae" title="gl_V3_Norm" alt="" coords="187,56,280,83"/>
+<area shape="rect" id="node4" href="$specbuf_8h.html#a2ce76402830fd013b9abefbf32e273d2" title="specbuf_get_buffer" alt="" coords="168,107,299,133"/>
+<area shape="rect" id="node5" href="$zbuffer_8h.html#a6408eb60745a8362ddf6ca9a9dc97e31" title="gl_malloc" alt="" coords="347,81,424,108"/>
+<area shape="rect" id="node6" href="$specbuf_8h.html#a6b1efd14520159d0e19f0875a2a7880d" title="calc_buf" alt="" coords="350,132,421,159"/>
+</map>

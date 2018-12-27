@@ -1,0 +1,5 @@
+<map id="CLoad3DS::ProcessNextMaterialChunk" name="CLoad3DS::ProcessNextMaterialChunk">
+<area shape="rect" id="node2" href="$3_d_s_8cpp.html#a5e933acfb97b26586252d559d26af25a" title="empty_chunk" alt="" coords="311,5,411,32"/>
+<area shape="rect" id="node3" href="$class_c_load3_d_s.html#afc2d69002657e64f2df59719b8068251" title="CLoad3DS::ReadChunk" alt="" coords="504,81,663,108"/>
+<area shape="rect" id="node4" href="$class_c_load3_d_s.html#a7d4564f2e782b8ec348faed08e07577f" title="CLoad3DS::ReadColorChunk" alt="" coords="267,107,456,133"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="glBindTexture" name="glBindTexture">
+<area shape="rect" id="node2" href="$zgl_8h.html#a346f233283cd5a0ea2cd95d2f65c0fab" title="gl_get_context" alt="" coords="155,5,261,32"/>
+<area shape="rect" id="node3" href="$api_8cpp.html#a7da30a821bd52e74601248e9f1a6b393" title="find_texture" alt="" coords="163,56,253,83"/>
+<area shape="rect" id="node4" href="$api_8cpp.html#a87397fa141120d429e8da0e6e563638f" title="alloc_texture" alt="" coords="160,107,256,133"/>
+<area shape="rect" id="node5" href="$zbuffer_8h.html#aaf262bfff7cbb62d532ab0c1172b12ca" title="gl_zalloc" alt="" coords="309,107,383,133"/>
+</map>
