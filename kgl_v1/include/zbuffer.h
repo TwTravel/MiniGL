@@ -36,7 +36,6 @@ typedef unsigned char PIXEL;
 #define PSZB 3
 #define PSZSH 5
 
- 
 
 typedef struct {
     int xsize,ysize;
@@ -53,6 +52,10 @@ typedef struct {
     PIXEL *current_texture;
 } ZBuffer;
 
+void gl_free(void *p);
+void *gl_malloc(int size);
+void *gl_zalloc(int size);
+
 typedef struct {
   int x,y,z;     /* integer coordinates in the zbuffer */
   int s,t;       /* coordinates for the mapping */
@@ -62,59 +65,67 @@ typedef struct {
 } ZBufferPoint;
 
 /* zbuffer.c */
-
-ZBuffer *ZB_open(int xsize,int ysize,int mode,
+ZBuffer inline *ZB_open(int xsize, int ysize, int mode,
 		 int nb_colors,
 		 unsigned char *color_indexes,
 		 int *color_table,
-		 void *frame_buffer);
+		 void *frame_buffer)
+{
+    ZBuffer *zb;
+    int size;
 
+    zb = (ZBuffer *)gl_malloc(sizeof(ZBuffer));
+    if (zb == NULL)
+	return NULL;
 
-void ZB_close(ZBuffer *zb);
+    zb->xsize = xsize;
+    zb->ysize = ysize;
+    zb->mode = mode;
+    zb->linesize = (xsize * PSZB + 3) & ~3;
 
-void ZB_resize(ZBuffer *zb,void *frame_buffer,int xsize,int ysize);
-void ZB_clear(ZBuffer *zb,int clear_z,int z,
-	      int clear_color,int r,int g,int b);
-/* linesize is in BYTES */
-void ZB_copyFrameBuffer(ZBuffer *zb,void *buf,int linesize);
+ 
+    zb->nb_colors = 0;
+ 
 
-/* zdither.c */
+    size = zb->xsize * zb->ysize * sizeof(double);//sizeof(unsigned short);
 
-void ZB_initDither(ZBuffer *zb,int nb_colors,
-		   unsigned char *color_indexes,int *color_table);
-//void ZB_closeDither(ZBuffer *zb);
-void ZB_ditherFrameBuffer(ZBuffer *zb,unsigned char *dest,
-			  int linesize);
+    zb->zbuf = (double *)gl_malloc(size);
+    if (zb->zbuf == NULL)
+	goto error;
 
-/* zline.c */
+    if (frame_buffer == NULL) {
+	zb->pbuf = (PIXEL *)gl_malloc(zb->ysize * zb->linesize);
+	if (zb->pbuf == NULL) {
+	    gl_free(zb->zbuf);
+	    goto error;
+	}
+	zb->frame_buffer_allocated = 1;
+    } else {
+	zb->frame_buffer_allocated = 0;
+	zb->pbuf = (PIXEL *)frame_buffer;
+    }
 
-void ZB_plot(ZBuffer *zb,ZBufferPoint *p);
-void ZB_line(ZBuffer *zb,ZBufferPoint *p1,ZBufferPoint *p2);
-void ZB_line_z(ZBuffer * zb, ZBufferPoint * p1, ZBufferPoint * p2);
+    zb->current_texture = NULL;
 
-/* ztriangle.c */
+    return zb;
+  error:
+    gl_free(zb);
+    return NULL;
+}
 
-void ZB_setTexture(ZBuffer *zb, PIXEL *texture);
+void inline ZB_close(ZBuffer * zb)
+{
 
-void ZB_fillTriangleFlat(ZBuffer *zb,
-		 ZBufferPoint *p1,ZBufferPoint *p2,ZBufferPoint *p3);
+    if (zb->frame_buffer_allocated)
+	gl_free(zb->pbuf);
 
-void ZB_fillTriangleSmooth(ZBuffer *zb,
-		   ZBufferPoint *p1,ZBufferPoint *p2,ZBufferPoint *p3);
+    gl_free(zb->zbuf);
+    gl_free(zb);
+}
 
-void ZB_fillTriangleMapping(ZBuffer *zb,
-		    ZBufferPoint *p1,ZBufferPoint *p2,ZBufferPoint *p3);
-
-void ZB_fillTriangleMappingPerspective(ZBuffer *zb,
-                    ZBufferPoint *p0,ZBufferPoint *p1,ZBufferPoint *p2);
-
-
-typedef void (*ZB_fillTriangleFunc)(ZBuffer  *,
-	    ZBufferPoint *,ZBufferPoint *,ZBufferPoint *);
-
-/* memory.c */
-void gl_free(void *p);
-void *gl_malloc(int size);
-void *gl_zalloc(int size);
+ void inline ZB_setTexture(ZBuffer *zb,PIXEL *texture)
+{
+    zb->current_texture=texture;
+}
 
 #endif /* _tgl_zbuffer_h_ */

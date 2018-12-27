@@ -405,19 +405,7 @@ static void gl_draw_triangle_clip(GLContext *c,
  
  
 
-void gl_draw_triangle_fill(GLContext *c,
-                           GLVertex *p0,GLVertex *p1,GLVertex *p2)
-{
- 
-    
-  if (c->texture_2d_enabled) {
- 
-    ZB_setTexture(c->zb,(PIXEL *)c->current_texture->images[0].pixmap);
-    ZB_fillTriangleMappingPerspective(c->zb,&p0->zp,&p1->zp,&p2->zp);
-  } else if (c->current_shade_model == GL_SMOOTH) {
-    ZB_fillTriangleSmooth(c->zb,&p0->zp,&p1->zp,&p2->zp);
-  } 
-}
+
 
  
 

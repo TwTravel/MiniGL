@@ -1,8 +1,13 @@
 #include "zgl.h"
 #include <stdio.h>
+#include "ztriangle.h"
+#include "light.h"
 /* glVertex */
 void gl_vertex_transform(GLContext * c, GLVertex * v);
 void glopMaterial(GLContext *c,GLParam *p);
+
+ 
+
 
 void gl_matrix_update(GLContext *c)
 {
