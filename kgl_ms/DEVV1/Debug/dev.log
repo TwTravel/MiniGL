@@ -1,4 +1,4 @@
-﻿生成启动时间为 2019/1/2 17:54:59。
+﻿生成启动时间为 2019/1/2 18:12:43。
      1>项目“D:\graphdev\MiniGL\kgl_ms\DEVV1\dev.vcxproj”在节点 2 上(rebuild 个目标)。
      1>_PrepareForClean:
          正在删除文件“Debug\dev.lastbuildstate”。
@@ -44,36 +44,36 @@
      1>d:\graphdev\minigl\kgl_ms\devv1\x11imp.h(149): warning C4101: “k”: 未引用的局部变量
      1>d:\graphdev\minigl\kgl_ms\devv1\readstl.h(282): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : 参见“fopen”的声明
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(144): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(144): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(144): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(147): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(209): warning C4305: “初始化”: 从“double”到“float”截断
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(209): warning C4305: “初始化”: 从“double”到“float”截断
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(210): warning C4305: “初始化”: 从“double”到“float”截断
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(210): warning C4305: “初始化”: 从“double”到“float”截断
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(212): warning C4305: “初始化”: 从“double”到“float”截断
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(212): warning C4305: “初始化”: 从“double”到“float”截断
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(213): warning C4305: “初始化”: 从“double”到“float”截断
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(213): warning C4305: “初始化”: 从“double”到“float”截断
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(215): warning C4305: “初始化”: 从“double”到“float”截断
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(215): warning C4305: “初始化”: 从“double”到“float”截断
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(216): warning C4305: “初始化”: 从“double”到“float”截断
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(216): warning C4305: “初始化”: 从“double”到“float”截断
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(242): warning C4101: “Emission”: 未引用的局部变量
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(263): warning C4018: “<”: 有符号/无符号不匹配
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(269): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(269): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(269): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(273): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(273): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(273): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(257): warning C4101: “i”: 未引用的局部变量
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(307): warning C4305: “参数”: 从“double”到“float”截断
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(289): warning C4101: “i”: 未引用的局部变量
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(422): warning C4305: “+=”: 从“double”到“float”截断
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(432): warning C4305: “+=”: 从“double”到“float”截断
-     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(443): warning C4305: “+=”: 从“double”到“float”截断
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(114): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(114): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(114): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(117): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(179): warning C4305: “初始化”: 从“double”到“float”截断
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(179): warning C4305: “初始化”: 从“double”到“float”截断
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(180): warning C4305: “初始化”: 从“double”到“float”截断
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(180): warning C4305: “初始化”: 从“double”到“float”截断
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(182): warning C4305: “初始化”: 从“double”到“float”截断
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(182): warning C4305: “初始化”: 从“double”到“float”截断
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(183): warning C4305: “初始化”: 从“double”到“float”截断
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(183): warning C4305: “初始化”: 从“double”到“float”截断
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(185): warning C4305: “初始化”: 从“double”到“float”截断
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(185): warning C4305: “初始化”: 从“double”到“float”截断
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(186): warning C4305: “初始化”: 从“double”到“float”截断
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(186): warning C4305: “初始化”: 从“double”到“float”截断
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(212): warning C4101: “Emission”: 未引用的局部变量
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(233): warning C4018: “<”: 有符号/无符号不匹配
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(239): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(239): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(239): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(243): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(243): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(243): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(227): warning C4101: “i”: 未引用的局部变量
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(277): warning C4305: “参数”: 从“double”到“float”截断
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(259): warning C4101: “i”: 未引用的局部变量
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(392): warning C4305: “+=”: 从“double”到“float”截断
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(402): warning C4305: “+=”: 从“double”到“float”截断
+     1>d:\graphdev\minigl\kgl_ms\devv1\main.cpp(413): warning C4305: “+=”: 从“double”到“float”截断
          kh_project.cpp
      1>d:\graphdev\minigl\kgl_ms\devv1\kh_project.cpp(63): warning C4244: “=”: 从“GLdouble”转换到“float”，可能丢失数据
      1>d:\graphdev\minigl\kgl_ms\devv1\kh_project.cpp(64): warning C4244: “=”: 从“GLdouble”转换到“float”，可能丢失数据
@@ -233,4 +233,4 @@
 
 生成成功。
 
-已用时间 00:00:07.52
+已用时间 00:00:06.92

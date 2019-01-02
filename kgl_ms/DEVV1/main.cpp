@@ -32,7 +32,6 @@ gluLookAt(GLdouble eyex, GLdouble eyey, GLdouble eyez, GLdouble centerx,
 //  从文件中创建纹理
 void CreateTexture(UINT textureArray[], char* strFileName, int textureID)
 {
-	//AUX_RGBImageRec *pBitmap = NULL;
 	
 	if(!strFileName)									// 如果无此文件，则直接返回
 		return;
@@ -41,43 +40,14 @@ void CreateTexture(UINT textureArray[], char* strFileName, int textureID)
 	
 	// 生成纹理
 	glGenTextures(1, &textureArray[textureID]);
-
-	// 设置像素对齐格式
-//	glPixelStorei (GL_UNPACK_ALIGNMENT, 1);
-
+ 
 	glBindTexture(GL_TEXTURE_2D, textureArray[textureID]);
 
-	/*gluBuild2DMipmaps(GL_TEXTURE_2D, 3, pBitmap.Width, pBitmap.Height, GL_BGR, GL_UNSIGNED_BYTE, pBitmap.Buffer);
-    //   glTexImage2D(GL_TEXTURE_2D,0,3,
-	//	pBitmap.Width, pBitmap.Height,0,
-	//	GL_BGR_EXT,GL_UNSIGNED_BYTE, pBitmap.Buffer);
 
-	
-	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_LINEAR_MIPMAP_NEAREST);
-	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR_MIPMAP_LINEAR);*/
-	
-	
-//	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-//	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);//
-//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-	//glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
-	//glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0,
-	//	GL_BGR_EXT, GL_UNSIGNED_BYTE, pixels);
 	glTexImage2D(GL_TEXTURE_2D,0,3,
 		pBitmap.Width, pBitmap.Height,0,
 		GL_RGB, GL_UNSIGNED_BYTE, pBitmap.Buffer);
-		//GL_BGR_EXT,GL_UNSIGNED_BYTE, pBitmap.Buffer);
-
-	/*if (pBitmap)										// 释放位图占用的资源
-	{
-		if (pBitmap->data)						
-		{
-			free(pBitmap->data);				
-		}
-
-		free(pBitmap);					
-	}*/
+		 
 }
 
 void RenderScene() 

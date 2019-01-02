@@ -31,11 +31,6 @@ void gl_draw_triangle_fill(GLContext *c,
                            GLVertex *p0,GLVertex *p1,GLVertex *p2);
  
 
-/* matrix.*/
-/*
-void glopLoadentity(GLContext *c,GLParam *p);
-void glopTranslate(GLContext *c,GLParam *p);*/
-
 /* light.c */
 void gl_add_select(GLContext *c,unsigned int zmin,unsigned int zmax);
 void gl_enable_disable_light(GLContext *c,int light,int v);
@@ -74,8 +69,6 @@ GLSpecBuf *specbuf_get_buffer(GLContext *c, const int shininess_i,
 {
   return gl_ctx;
 }
-
- 
 
 
  void inline gl_free(void *p)
