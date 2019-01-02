@@ -56,7 +56,6 @@ void RenderScene()
 	//glLoadIdentity();									
 
 	//gluLookAt(		0, 1.5f, 8,		0, 0.5f, 0,			0, 1, 0);
-	
 	//g_RotationSpeed = 35.0;
 	//g_RotateX += g_RotationSpeed;	
 	//glRotatef(g_RotateX, 0, 1.0f, 0);
@@ -126,6 +125,7 @@ void RenderScene()
 
 void gluPerspective( GLdouble fovy, GLdouble aspect,
 		     GLdouble zNear, GLdouble zFar );
+
 void reshape(int width, int height)		
 {
 	if (height==0)										
