@@ -160,13 +160,17 @@ void glInit(void *zbuffer1)
   vector<M4> Matrix_TEXTURE_Vec;
   M4 *matrix_buffer_ptr[3];*/
 
-   c->Matrix_MODELVIEW_Vec.resize(c->matrix_stack_depth_max[0]);
+  /* c->Matrix_MODELVIEW_Vec.resize(c->matrix_stack_depth_max[0]);
    c->Matrix_PROJECTION_Vec.resize(c->matrix_stack_depth_max[1]);
-   c->Matrix_TEXTURE_Vec.resize(c->matrix_stack_depth_max[2]);
+   c->Matrix_TEXTURE_Vec.resize(c->matrix_stack_depth_max[2]); */
+ 
+  c->TkGLMat[KH_ModelView].set_stack_size(c->matrix_stack_depth_max[0]); 
+  c->TkGLMat[KH_PROJECTION].set_stack_size(c->matrix_stack_depth_max[1]);
+  c->TkGLMat[KH_TEXTURE].set_stack_size(c->matrix_stack_depth_max[2]);
 
-  c->matrix_buffer_ptr[0] = &c->Matrix_MODELVIEW_Vec[0];
-  c->matrix_buffer_ptr[1] = &c->Matrix_PROJECTION_Vec[1];
-  c->matrix_buffer_ptr[2] = &c->Matrix_TEXTURE_Vec[2];
+  //c->matrix_buffer_ptr[0] = &c->Matrix_MODELVIEW_Vec[0];
+  //c->matrix_buffer_ptr[1] = &c->Matrix_PROJECTION_Vec[1];
+  //c->matrix_buffer_ptr[2] = &c->Matrix_TEXTURE_Vec[2];
 
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();

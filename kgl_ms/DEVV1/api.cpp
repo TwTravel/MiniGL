@@ -80,7 +80,7 @@ void glVertex4f(float x,float y,float z,float w)
 
     if (c->texture_2d_enabled) {
 	if (c->apply_texture_matrix) {
-	    M4::gl_M4_MulV4(&v->tex_coord, c->matrix_buffer_ptr[2], &c->current_tex_coord);
+	    M4::gl_M4_MulV4(&v->tex_coord, c->TkGLMat[KH_TEXTURE].get_current_matrix(), &c->current_tex_coord);
 	} else {
 	    v->tex_coord = c->current_tex_coord;
 	}
@@ -96,38 +96,13 @@ void glVertex4f(float x,float y,float z,float w)
     switch (c->begin_type) {
      
 
-   
-
     case GL_TRIANGLES:
 	if (n == 3) {
 	    gl_draw_triangle(c, &c->vertex[0], &c->vertex[1], &c->vertex[2]);
 	    n = 0;
 	}
 	break;
-    /*case GL_TRIANGLE_STRIP:
-	if (cnt >= 3) {
-	    if (n == 3)
-		n = 0;
-            // needed to respect triangle orientation 
-            switch(cnt & 1) {
-            case 0:
-      		gl_draw_triangle(c,&c->vertex[2],&c->vertex[1],&c->vertex[0]);
-      		break;
-            default:
-            case 1:
-      		gl_draw_triangle(c,&c->vertex[0],&c->vertex[1],&c->vertex[2]);
-      		break;
-            }
-	}
-	break;
-    case GL_TRIANGLE_FAN:
-	if (n == 3) {
-	    gl_draw_triangle(c, &c->vertex[0], &c->vertex[1], &c->vertex[2]);
-	    c->vertex[1] = c->vertex[2];
-	    n = 2;
-	}
-	break;
-    */
+  
     case GL_QUADS:
 	if (n == 4) {
 	    c->vertex[2].edge_flag = 0;
@@ -209,14 +184,13 @@ void glColor3f(float x,float y,float z)
  
 
 /* TexCoord */
-
 void glTexCoord4f(float s,float t,float r,float q)
 {
     GLContext *c=gl_get_context(); 
-    c->current_tex_coord.X = s;
+    c->current_tex_coord.X =  s;
     c->current_tex_coord.Y =  t;
-    c->current_tex_coord.Z = r;
-    c->current_tex_coord.W = q;
+    c->current_tex_coord.Z =  r;
+    c->current_tex_coord.W =  q;
 }
 
 void glTexCoord2f(float s,float t)
@@ -265,10 +239,8 @@ void GL_EnableDisable(GLContext *c,GLParam *p)
 void glEnable(int cap)
 {
   GLParam p[3];
-
   //p[0].op=OP_EnableDisable;
-  p[1].i=cap;
-  p[2].i=1;
+  p[1].i=cap; p[2].i=1;
 
    GLContext *c=gl_get_context(); 
    GL_EnableDisable( c, p);
@@ -279,8 +251,7 @@ void glDisable(int cap)
 {
   GLParam p[3];
   //p[0].op=OP_EnableDisable;
-  p[1].i=cap;
-  p[2].i=0;
+  p[1].i=cap;  p[2].i=0;
   
   GLContext *c=gl_get_context();
   GL_EnableDisable( c, p);
@@ -307,14 +278,14 @@ void glBegin(int mode)
 
 	if (c->lighting_enabled) {
 	    /* precompute inverse modelview */
-	    M4::gl_M4_Inv(&tmp, c->matrix_buffer_ptr[0]);
+	    M4::gl_M4_Inv(&tmp, c->TkGLMat[KH_ModelView].get_current_matrix());
 	    M4::gl_M4_Transpose(&c->matrix_model_view_inv, &tmp);
 	} else {
 	    float *m = &c->matrix_model_projection.m[0][0];
 	    /* precompute projection matrix */
 	    M4::gl_M4_Mul(&c->matrix_model_projection,
-		      c->matrix_buffer_ptr[1],
-		      c->matrix_buffer_ptr[0]);
+		      c->TkGLMat[KH_PROJECTION].get_current_matrix(),
+		      c->TkGLMat[KH_ModelView].get_current_matrix());
 	    /* test to accelerate computation */
 	    c->matrix_model_projection_no_w_transform = 0;
 	    if (m[12] == 0.0 && m[13] == 0.0 && m[14] == 0.0)
@@ -322,7 +293,7 @@ void glBegin(int mode)
 	}
 
 	/* test if the texture matrix is not Identity */
-	c->apply_texture_matrix = !M4::gl_M4_IsId(c->matrix_buffer_ptr[2]);
+	c->apply_texture_matrix = !M4::gl_M4_IsId(c->TkGLMat[KH_TEXTURE].get_current_matrix());
 
 	c->matrix_model_projection_updated = 0;
     }
@@ -394,67 +365,43 @@ void glMatrixMode(int mode)
 void glLoadIdentity(void)
 {
   GLContext *c=gl_get_context(); 
-   
- 
-  M4::gl_M4_Id(c->matrix_buffer_ptr[c->matrix_mode]);
-
+  M4::gl_M4_Id(c->TkGLMat[c->matrix_mode].get_current_matrix());
   gl_matrix_update(c);
 }
 
 void glMultMatrixf(const float *mm)
 {
    GLContext *c=gl_get_context(); 
-  GLParam p[17];
-  int i;
-
-   
-  for(i=0;i<16;i++) p[i+1].f=mm[i];
-
-  //glRunFunc(p);
-   M4 m;
- 
-
-  GLParam *q;
-  q=p+1;
-
+   M4 m1,m;
+   memcpy( &m1.m[0][0], mm,16*sizeof(float));
+   M4::gl_M4_Transpose(&m, &m1);
+  
+  /*GLParam p[17];
+  for(int i=0;i<16;i++) p[i+1].f = mm[i];//glRunFunc(p);
+  GLParam *q; q=p+1;
   for(i=0;i<4;i++) {
-    m.m[0][i]=q[0].f;
-    m.m[1][i]=q[1].f;
-    m.m[2][i]=q[2].f;
-    m.m[3][i]=q[3].f;
-    q+=4;
-  }
+    m.m[0][i]=q[0].f; m.m[1][i]=q[1].f;
+    m.m[2][i]=q[2].f; m.m[3][i]=q[3].f;
+    q+=4; }  */
 
-  M4::gl_M4_MulLeft(c->matrix_buffer_ptr[c->matrix_mode],&m);
+  M4::gl_M4_MulLeft(c->TkGLMat[c->matrix_mode].get_current_matrix(),&m);
 
   gl_matrix_update(c);
 }
 
 void glPushMatrix(void)
 {
-  GLContext *c=gl_get_context(); 
-  GLParam p[1];
- 
-  int n=c->matrix_mode;
-  M4 *m;
- 
-
-  m=++c->matrix_buffer_ptr[n];
-  
-  M4::gl_M4_Move(&m[0],&m[-1]);
-
+  GLContext *c=gl_get_context();  
+  c->TkGLMat[c->matrix_mode].push_matrix();
   gl_matrix_update(c);
 }
+
 
 void glPopMatrix(void)
 {
    GLContext *c=gl_get_context(); 
-   
-  int n=c->matrix_mode;
-
-//  assert( c->matrix_buffer_ptr[n] > c->matrix_stack[n] );
-  c->matrix_buffer_ptr[n]--;
-  gl_matrix_update(c);
+   c->TkGLMat[c->matrix_mode].pop_matrix();
+   gl_matrix_update(c);
 }
 
 void glRotatef(float angle,float x,float y,float z)
@@ -524,7 +471,7 @@ void glRotatef(float angle,float x,float y,float z)
     }
   }
 
-  M4::gl_M4_MulLeft(c->matrix_buffer_ptr[c->matrix_mode],&m);
+  M4::gl_M4_MulLeft(c->TkGLMat[c->matrix_mode].get_current_matrix(),&m);
 
   gl_matrix_update(c);
 }
@@ -532,36 +479,33 @@ void glRotatef(float angle,float x,float y,float z)
 void glTranslatef(float x,float y,float z)
 {
   GLContext *c=gl_get_context(); 
- 
-
  // glRunFunc(p);
    float *m;
+   M4 mm;
  // float x=p[1].f,y=p[2].f,z=p[3].f;
+   mm.m[0][0] = 1; mm.m[0][1] = 0; mm.m[0][2] = 0; mm.m[0][3] = x; 
+   mm.m[1][0] = 0; mm.m[1][1] = 1; mm.m[1][2] = 0; mm.m[1][3] = y;  
+   mm.m[2][0] = 0; mm.m[2][1] = 0; mm.m[2][2] = 1; mm.m[2][3] = z; 
+   mm.m[3][0] = 0; mm.m[3][1] = 0; mm.m[3][2] = 0; mm.m[3][3] = 1; 
 
-  m=&c->matrix_buffer_ptr[c->matrix_mode]->m[0][0];
-
-  m[3] = m[0] * x + m[1] * y + m[2]  * z + m[3];
-  m[7] = m[4] * x + m[5] * y + m[6]  * z + m[7];
-  m[11] = m[8] * x + m[9] * y + m[10] * z + m[11];
-  m[15] = m[12] * x + m[13] * y + m[14] * z + m[15];
+   M4::gl_M4_MulLeft(c->TkGLMat[c->matrix_mode].get_current_matrix(),&mm);
+ 
 
   gl_matrix_update(c);
 }
 
 void glScalef(float x,float y,float z)
 {
-  GLContext *c=gl_get_context(); 
-  
-  //glRunFunc(p);
-  float *m;
-//  float x=p[1].f,y=p[2].f,z=p[3].f;
+   GLContext *c=gl_get_context(); 
+   float *m;
+   M4 mm;
+ // float x=p[1].f,y=p[2].f,z=p[3].f;
+   mm.m[0][0] = x; mm.m[0][1] = 0; mm.m[0][2] = 0; mm.m[0][3] = 0; 
+   mm.m[1][0] = 0; mm.m[1][1] = y; mm.m[1][2] = 0; mm.m[1][3] = 0;  
+   mm.m[2][0] = 0; mm.m[2][1] = 0; mm.m[2][2] = z; mm.m[2][3] = 0; 
+   mm.m[3][0] = 0; mm.m[3][1] = 0; mm.m[3][2] = 0; mm.m[3][3] = 1; 
+   M4::gl_M4_MulLeft(c->TkGLMat[c->matrix_mode].get_current_matrix(),&mm);
 
-  m=&c->matrix_buffer_ptr[c->matrix_mode]->m[0][0];
-
-  m[0] *= x;   m[1] *= y;   m[2]  *= z;
-  m[4] *= x;   m[5] *= y;   m[6]  *= z;
-  m[8] *= x;   m[9] *= y;   m[10] *= z;
-  m[12] *= x;   m[13] *= y;   m[14] *= z;
   gl_matrix_update(c);
 }
 
@@ -633,7 +577,7 @@ void glFrustum(double left,double right,double bottom,double top,
   r[8]= 0; r[9]=0; r[10]=C; r[11]=D;
   r[12]= 0; r[13]=0; r[14]=-1; r[15]=0;
 
-  M4::gl_M4_MulLeft(c->matrix_buffer_ptr[c->matrix_mode],&m);
+  M4::gl_M4_MulLeft(c->TkGLMat[c->matrix_mode].get_current_matrix(),&m);
 
   gl_matrix_update(c);
 }
@@ -812,7 +756,7 @@ void glLightfv(int light,int type,float *val)
   case GL_POSITION:
     {
       V4 pos;
-      M4::gl_M4_MulV4(&pos,c->matrix_buffer_ptr[0],&v);
+      M4::gl_M4_MulV4(&pos,c->TkGLMat[KH_ModelView].get_current_matrix(),&v);
 
       l->position=pos;
 

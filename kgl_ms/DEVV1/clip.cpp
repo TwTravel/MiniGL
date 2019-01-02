@@ -75,7 +75,7 @@ void gl_transform_to_viewport(GLContext *c,GLVertex *v)
     if (c->lighting_enabled) {
 	/* eye coordinates needed for lighting */
 
-	m = &c->matrix_buffer_ptr[0]->m[0][0];
+	m = &c->TkGLMat[KH_ModelView].get_current_matrix()->m[0][0];
 	v->ec.X = (v->coord.X * m[0] + v->coord.Y * m[1] +
 		   v->coord.Z * m[2] + m[3]);
 	v->ec.Y = (v->coord.X * m[4] + v->coord.Y * m[5] +
@@ -86,7 +86,8 @@ void gl_transform_to_viewport(GLContext *c,GLVertex *v)
 		   v->coord.Z * m[14] + m[15]);
 
 	/* projection coordinates */
-	m = &c->matrix_buffer_ptr[1]->m[0][0];
+	m = //&c->matrix_buffer_ptr[1];
+	 &(c->TkGLMat[KH_PROJECTION].get_current_matrix()->m[0][0]);
 	v->pc.X = (v->ec.X * m[0] + v->ec.Y * m[1] +
 		   v->ec.Z * m[2] + v->ec.W * m[3]);
 	v->pc.Y = (v->ec.X * m[4] + v->ec.Y * m[5] +
